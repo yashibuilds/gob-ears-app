@@ -14,7 +14,19 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             mainColor.ignoresSafeArea()
+            VStack {
+                Text("1 / 10")
+                    .font(.callout)
+                    .multilineTextAlignment(.leading)
+                    .padding()
+                Text("After whom is the fountain in Sproul Plaza named?")
+                    .font(.largeTitle)
+                    .bold()
+                    .multilineTextAlignment(.leading)
+                Spacer()
+            }
         }
+        .foregroundColor(.white)
     }
 }
 
