@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     let mainColor = Color(red: 0/255, green: 74/255, blue: 174/255)
-    let accentColor = Color(red: 255/255, green: 195/255, blue: 27/255)
+    let question = Question(questionText: "After whom is the fountain in Sproul Plaza named?", possibleAnswers: ["Carol Christ", "Les Richter", "Ludwig von Schwarenburg", "Mario Savio"], correctAnswerIndex: 2)
     
     var body: some View {
         ZStack {
@@ -20,7 +20,7 @@ struct ContentView: View {
                     .multilineTextAlignment(.leading)
                     .padding()
                 
-                Text("After whom is the fountain in Sproul Plaza named?")
+                Text(question.questionText)
                     .font(.largeTitle)
                     .bold()
                     .multilineTextAlignment(.leading)
@@ -29,39 +29,19 @@ struct ContentView: View {
                 
                 HStack {
                     Button(action: {print("Tapped on Choice 1")}, label: {
-                        Text("Carol Christ")
-                        .font(.body)
-                        .bold()
-                        .multilineTextAlignment(.center)
-                        .padding()
-                        .border(accentColor, width: 4)
+                        ChoiceTextView(choiceText: question.possibleAnswers[0])
                     })
                     
                     Button(action: {print("Tapped on Choice 2")}, label: {
-                        Text("Les Richter")
-                        .font(.body)
-                        .bold()
-                        .multilineTextAlignment(.center)
-                        .padding()
-                        .border(accentColor, width: 4)
+                        ChoiceTextView(choiceText: question.possibleAnswers[1])
                     })
                     
                     Button(action: {print("Tapped on Choice 3")}, label: {
-                        Text("Ludwig von Schwarenburg")
-                        .font(.body)
-                        .bold()
-                        .multilineTextAlignment(.center)
-                        .padding()
-                        .border(accentColor, width: 4)
+                        ChoiceTextView(choiceText: question.possibleAnswers[2])
                     })
                     
                     Button(action: {print("Tapped on Choice 4")}, label: {
-                        Text("Mario Savio")
-                        .font(.body)
-                        .bold()
-                        .multilineTextAlignment(.center)
-                        .padding()
-                        .border(accentColor, width: 4)
+                        ChoiceTextView(choiceText: question.possibleAnswers[3])
                     })
                 }
             }
