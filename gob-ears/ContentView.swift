@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let mainColor = Color(red: 0/255, green: 74/255, blue: 174/255)
+    @State var mainColor = Color(red: 0/255, green: 74/255, blue: 174/255)
     let question = Question(questionText: "After whom is the fountain in Sproul Plaza named?", possibleAnswers: ["Carol Christ", "Les Richter", "Ludwig von Schwarenburg", "Mario Savio"], correctAnswerIndex: 2)
     
     var body: some View {
@@ -32,6 +32,7 @@ struct ContentView: View {
                         answerIndex in
                         Button(action: {
                             print("Tapped on option with the text: \(question.possibleAnswers[answerIndex])")
+                            mainColor = answerIndex == question.correctAnswerIndex ? .green : .red
                           }, label: {
                             ChoiceTextView(choiceText: question.possibleAnswers[answerIndex])
                           })
