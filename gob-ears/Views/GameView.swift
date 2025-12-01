@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct GameView: View {
     @State var mainColor = Color(red: 0/255, green: 74/255, blue: 174/255)
     let question = Question(questionText: "After whom is the fountain in Sproul Plaza named?", possibleAnswers: ["Carol Christ", "Les Richter", "Ludwig von Schwarenburg", "Mario Savio"], correctAnswerIndex: 2)
     
@@ -45,5 +45,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    GameView()
 }

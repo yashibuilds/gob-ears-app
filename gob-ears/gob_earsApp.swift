@@ -11,7 +11,7 @@ import SwiftUI
 struct gob_earsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GameView()
         }
     }
 }
