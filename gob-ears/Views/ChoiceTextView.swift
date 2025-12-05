@@ -15,11 +15,11 @@ struct ChoiceTextView: View {
             .font(.body)
             .bold()
             .multilineTextAlignment(.center)
-            .padding()
+            .frame(maxWidth: .infinity, minHeight: 95)
             .border(GameColor.accent, width: 4)
     }
 }
 
 #Preview {
-    ChoiceTextView(choiceText: "Hi!")
+    ChoiceTextView(choiceText: "Ludwig von Schwarenburg")
 }
