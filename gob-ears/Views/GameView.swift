@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct GameView: View {
-    @State var mainColor = GameColor.main
+    @State var currColor = GameColor.main
     let question = Question.allQuestions[0]
     
     var body: some View {
         ZStack {
-            mainColor.ignoresSafeArea()
+            currColor.ignoresSafeArea()
             VStack {
                 Text("1 / 10")
                     .font(.callout)
@@ -31,7 +31,7 @@ struct GameView: View {
                         answerIndex in
                         Button(action: {
                             print("Tapped on option with the text: \(question.possibleAnswers[answerIndex])")
-                            mainColor = answerIndex == question.correctAnswerIndex ? .green : .red
+                            currColor = answerIndex == question.correctAnswerIndex ? .green : .red
                           }, label: {
                             ChoiceTextView(choiceText: question.possibleAnswers[answerIndex])
                           })

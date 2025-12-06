@@ -17,7 +17,7 @@ struct WelcomeView: View {
                     
                         Text("Welcome to Cal Trivia!")
                         .font(.system(size: 34, weight: .bold))
-                            .multilineTextAlignment(.leading)
+                            .multilineTextAlignment(.center)
                             .padding()
                 
                     Spacer()

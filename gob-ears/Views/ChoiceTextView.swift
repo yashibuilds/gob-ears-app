@@ -12,10 +12,11 @@ struct ChoiceTextView: View {
 
     var body: some View {
         Text(choiceText)
-            .font(.body)
+            .font(.system(size: 15, weight: .bold))
             .bold()
             .multilineTextAlignment(.center)
             .frame(maxWidth: .infinity, minHeight: 95)
+            .padding(.horizontal)
             .border(GameColor.accent, width: 4)
     }
 }
